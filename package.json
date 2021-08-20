@@ -1,0 +1,9 @@
+{
+  "name": "web-portfolio-frantss",
+  "version": "1.0.0",
+  "description": "A web portfolio for Programación Web",
+  "main": "index.js",
+  "repository": "https://Frantss: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@github.com/ucudal/PW_2021_Website-Frantss.git",
+  "author": "Frantss <frantss11@gmail.com>",
+  "license": "MIT"
+}
