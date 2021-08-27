@@ -7,9 +7,12 @@
   "author": "Frantss <frantss11@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "build:css": "npx tailwind -i ./styles/tailwind.css -o styles/tailwind.output.css"
+    "build:css": "yarn tailwind -i ./styles/tailwind.css -o styles/tailwind.output.css",
+    "dev": "yarn concurrently \"yarn build:css -w\" \"yarn browser-sync start -c browser-sync.config.js\""
   },
   "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "concurrently": "^6.2.1",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -20,5 +23,8 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.7"
+  },
+  "dependencies": {
+    "feather-icons": "^4.28.0"
   }
 }
