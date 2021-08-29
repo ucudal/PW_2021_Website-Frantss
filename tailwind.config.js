@@ -13,10 +13,16 @@ module.exports = {
       tertiary: theme('colors.tertiary'),
     }),
     textColor: theme => theme('colors'),
+    extend: {
+      inset: {
+        '1/2': '50%',
+      },
+    },
   },
   variants: {
     extend: {
       fill: ['hover'],
+      borderWidth: ['hover'],
     },
   },
   plugins: [],

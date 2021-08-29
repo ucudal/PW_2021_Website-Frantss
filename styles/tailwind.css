@@ -8,7 +8,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'Epilogue', arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: white;
   background: #1d1160;
@@ -29,6 +29,14 @@ body {
   @apply hover:fill-tertiary hover:text-secondary;
 }
 
-.section-title {
-  @apply font-bold text-4xl m-4;
+.nav-item {
+  @apply flex flex-row-reverse gap-2 justify-start;
+}
+
+.nav-item > p {
+  @apply opacity-0 transition-opacity duration-1000 ease-out;
+}
+
+.nav-item > a:hover + p {
+  @apply font-bold opacity-100;
 }

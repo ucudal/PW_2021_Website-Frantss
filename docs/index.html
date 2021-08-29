@@ -7,65 +7,60 @@
     <title>Portfolio Web - Francisco Bongiovanni</title>
     <link href="../styles/tailwind.output.css" rel="stylesheet" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap"
       rel="stylesheet"
     />
     <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
   </head>
   <body>
-    <header class="fixed top-0 bg-primary w-full">
-      <nav class="flex gap-4 m-4">
-        <a
-          href="https://github.com/Frantss"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><i class="icon" data-feather="github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/franciscofb/"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><i class="icon" data-feather="linkedin"></i
-        ></a>
-        <a
-          href="mailto:frantss.bongiovanni@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><i class="icon" data-feather="mail"></i
-        ></a>
-      </nav>
+    <header class="fixed flex gap-4 items-center p-8 pl-32">
+      <a
+        href="https://github.com/Frantss"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><i class="icon" data-feather="github"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/franciscofb/"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><i class="icon" data-feather="linkedin"></i
+      ></a>
+      <a
+        href="mailto:frantss.bongiovanni@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><i class="icon" data-feather="mail"></i
+      ></a>
+      <a href="/" class="border-l-2 pl-2 hover:text-secondary font-bold"
+        >Francisco Bongiovanni</a
+      >
     </header>
-    <main>
-      <section class="h-screen flex flex-col gap-8 items-center justify-center">
-        <img class="rounded-full w-52 h-52" src="../assets/me.jpeg" alt="me" />
-        <h1 class="text-4xl font-bold">Francisco Bongiovanni</h1>
-        <h2 class="text-xl">Web Developer</h2>
-      </section>
-      <section class="h-screen">
-        <h1 class="section-title">The tools I use</h1>
-        <div
-          class="flex flex-col flex-wrap gap-8 items-center"
-          id="tools-container"
-        ></div>
-      </section>
-      <section class="h-screen">
-        <h1 class="section-title">Where I've worked</h1>
-        <div class="flex flex-col items-center justify-center">
-          <div class="flex w-full">
-            <div class="border-r p-4 w-1/3 text-right align-middle">
-              2020-Present
-            </div>
-            <div class="w-auto p-4 w-2/3">
-              <div>Moove-It</div>
-              <div>Fullstack Developer</div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <nav class="fixed right-0 flex flex-col gap-4 p-8">
+      <div class="nav-item">
+        <a href="/"><i class="icon" data-feather="home"></i></a>
+        <p>Home</p>
+      </div>
+      <div class="nav-item">
+        <a href="/"><i class="icon" data-feather="briefcase"></i></a>
+        <p>Experience</p>
+      </div>
+      <div class="nav-item">
+        <a href="/"><i class="icon" data-feather="target"></i></a>
+        <p>Skills</p>
+      </div>
+      <div class="nav-item">
+        <a href="/"><i class="icon" data-feather="package"></i></a>
+        <p>Libraries and frameworks</p>
+      </div>
+    </nav>
+    <main class="absolute top-1/2 p-32 pb-0">
+      <h1 class="text-5xl font-bold">Francisco Bongiovanni</h1>
+      <h2 class="text-2xl">Fullstack developer</h2>
+      <p class="text-xl font-thin">I&apos;m a web developer</p>
     </main>
     <script>
       feather.replace();
     </script>
-    <script src="../src/create-tools.js"></script>
   </body>
 </html>
