@@ -12,9 +12,9 @@ body {
   font-weight: 400;
   color: white;
   background: #1d1160;
-  background: linear-gradient(130deg, #1d1160 0%, #5c00a2 60%, #662d91 100%);
+  background-image: url('../assets/background.jpg');
   background-repeat: repeat;
-  background-blend-mode: multiply;
+  background-size: cover;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,6 +23,20 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.canvas {
+  background: #1d1160;
+  background: linear-gradient(
+    130deg,
+    #1d116044 0%,
+    #5c00a244 60%,
+    #662d9144 100%
+  );
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
 }
 
 .icon {
