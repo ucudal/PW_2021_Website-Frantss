@@ -54,3 +54,19 @@ body {
 .nav-item > a:hover + p {
   @apply font-bold opacity-100;
 }
+
+.experience-item-container {
+  @apply p-8 m-16 mb-2 mt-2 w-2/3 flex items-center justify-center;
+  @apply border hover:border-secondary hover:bg-secondary hover:bg-opacity-20;
+
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+
+.experience-item-container > div {
+  @apply text-center;
+}
+
+.experience-item-container a {
+  text-decoration: underline;
+}

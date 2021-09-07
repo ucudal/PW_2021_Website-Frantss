@@ -7,7 +7,7 @@
   "author": "Frantss <frantss11@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "build:css": "yarn tailwind -i ./styles/tailwind.css -o styles/tailwind.output.css",
+    "build:css": "yarn tailwind -i ./styles/tailwind.css -o styles/tailwind.output.css --jit",
     "dev": "yarn concurrently \"yarn build:css -w\" \"yarn browser-sync start -c browser-sync.config.js\""
   },
   "devDependencies": {
