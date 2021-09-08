@@ -57,7 +57,8 @@ body {
 
 .experience-item-container {
   @apply p-8 m-16 mb-2 mt-2 w-2/3 flex items-center justify-center;
-  @apply border hover:border-secondary hover:bg-secondary hover:bg-opacity-20;
+  @apply border hover:border-secondary;
+  @apply hover:bg-secondary hover:bg-opacity-20 bg-opacity-40 bg-primary;
 
   transition-property: background-color;
   transition-duration: 300ms;
@@ -69,4 +70,14 @@ body {
 
 .experience-item-container a {
   text-decoration: underline;
+}
+
+.skill-item-container {
+  @apply text-tertiary text-center;
+  @apply flex flex-col justify-center;
+}
+
+.skill-item-container svg {
+  @apply text-tertiary;
+  @apply hover:fill-tertiary hover:text-secondary;
 }

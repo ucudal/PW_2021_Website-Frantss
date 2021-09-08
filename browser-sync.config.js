@@ -2,7 +2,7 @@ module.exports = {
   ui: {
     port: 3001,
   },
-  files: ['**/*.html', '**/*.css', '**/*.js'],
+  files: ['**/*.html', '**/*.css', '**/*.js', '**/*.svg'],
   watchEvents: ['change'],
   watch: false,
   ignore: [],
