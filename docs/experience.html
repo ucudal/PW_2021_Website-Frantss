@@ -59,71 +59,30 @@
           <p>Projects</p>
         </div>
       </nav>
-      <main class="flex flex-col items-center justify-center h-full">
-        <div class="experience-item-container">
-          <div>
-            <p class="text-xl font-bold">
-              Fullstack Developer -
+      <main x-data="experience-data" class="flex flex-col items-center justify-center h-full">
+        <template x-for="exp in experience">
+          <div class="experience-item-container">
+            <div>
+              <p class="text-xl font-bold" x-text="exp.position">
+                
+              </p>
               <a
-                href="https://moove-it.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Moove-it</a
-              >
-            </p>
-            <p>2020 - Present</p>
+                  x-bind:href="exp.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  x-text="exp.place"
+                ></a
+                >
+              <p x-text="exp.date"></p>
+            </div>
           </div>
-        </div>
-        <div class="experience-item-container">
-          <div>
-            <p class="text-xl font-bold">
-              Fullstack Developer -
-              <a
-                href="https://www.hulu.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Hulu</a
-              >
-            </p>
-            <p>2020 - Present</p>
-          </div>
-        </div>
-        <div class="experience-item-container">
-          <div>
-            <p class="text-xl font-bold">
-              Fullstack Developer Teacher -
-              <a
-                href="https://senpaiacademy.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Senpai Academy</a
-              >
-            </p>
-            <p>2021</p>
-          </div>
-        </div>
-        <div class="experience-item-container">
-          <div>
-            <p class="text-xl font-bold">
-              Java Developer -
-              <a
-                href="https://www.st.com.uy/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ST Consultores</a
-              >
-            </p>
-            <p>2019</p>
-          </div>
+        </template>
         </div>
       </main>
     </div>
     <script>
       feather.replace();
     </script>
+    <script type="module" src="../build/src/experience.js"></script>
   </body>
 </html>

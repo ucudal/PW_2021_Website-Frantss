@@ -37,27 +37,15 @@
           >Francisco Bongiovanni</a
         >
       </header>
-      <nav class="fixed right-0 flex flex-col gap-4 p-8">
-        <div class="nav-item">
-          <a href="/"><i class="icon" data-feather="home"></i></a>
-          <p>Home</p>
-        </div>
-        <div class="nav-item">
-          <a href="./experience.html"
-            ><i class="icon" data-feather="briefcase"></i
-          ></a>
-          <p>Experience</p>
-        </div>
-        <div class="nav-item">
-          <a href="./skills.html"><i class="icon" data-feather="target"></i></a>
-          <p>Skills</p>
-        </div>
-        <div class="nav-item">
-          <a href="./projects.html"
-            ><i class="icon" data-feather="package"></i
-          ></a>
-          <p>Projects</p>
-        </div>
+      <nav x-data="navbar" class="fixed right-0 flex flex-col gap-4 p-8">
+        <template x-for="item in items">
+          <div class="nav-item">
+            <a x-bind:href="item.url"
+              ><i class="icon" x-bind:data-feather="item.icon"></i
+            ></a>
+            <p x-text="item.name"></p>
+          </div>
+        </template>
       </nav>
       <main class="absolute top-1/2 p-32 pb-0">
         <h1 class="text-5xl font-bold">Francisco Bongiovanni</h1>

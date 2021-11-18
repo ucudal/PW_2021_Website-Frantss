@@ -7,8 +7,10 @@
   "author": "Frantss <frantss11@gmail.com>",
   "main": "index.js",
   "scripts": {
+    "minify": "yarn uglifyjs -c -m --source-map -o build/index.js",
+    "build:ts": "tsc",
     "build:css": "yarn tailwind -i ./styles/tailwind.css -o styles/tailwind.output.css --jit",
-    "dev": "yarn concurrently \"yarn build:css -w\" \"yarn browser-sync start -c browser-sync.config.js\""
+    "dev": "yarn concurrently \"yarn build:css -w\" \"yarn build:ts -w\" \"yarn browser-sync start -c browser-sync.config.js\""
   },
   "devDependencies": {
     "browser-sync": "^2.27.5",
@@ -22,9 +24,11 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^1.7.0",
     "prettier": "^2.3.2",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.7",
+    "uglify-js": "^3.14.3"
   },
   "dependencies": {
+    "alpinejs": "^3.5.1",
     "feather-icons": "^4.28.0"
   }
 }
