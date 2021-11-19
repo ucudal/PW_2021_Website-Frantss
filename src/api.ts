@@ -15,9 +15,12 @@ export const postSubmitForm = async (data: {
   email: string;
   message: string;
 }) => {
-  const response = await fetch(`${API_BASE_URL}/experience`, {
+  const response = await fetch(`${API_BASE_URL}/submit-form`, {
     method: 'POST',
     body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json',
+    },
   });
 
   return response.json();

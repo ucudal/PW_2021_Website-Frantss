@@ -81,3 +81,45 @@ body {
   @apply text-tertiary;
   @apply hover:fill-tertiary hover:text-secondary;
 }
+
+#modal {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#modal > form {
+  @apply border-tertiary border;
+  @apply bg-primary bg-opacity-100;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem;
+}
+
+#modal input,
+#modal textarea,
+#modal button {
+  @apply hover:bg-secondary hover:bg-opacity-20;
+  @apply border-tertiary border;
+  background: none;
+  padding: 0.5rem;
+}
+
+#modal button {
+  align-self: flex-end;
+}
+
+#modal > form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#modal > form > div:last-child {
+  flex-direction: row;
+  justify-content: space-around;
+}
