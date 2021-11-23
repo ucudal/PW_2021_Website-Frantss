@@ -1,6 +1,4 @@
 .DS_Store
 .history
 node_modules
-styles/tailwind.output.css
 yarn-error.log
-build

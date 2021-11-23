@@ -5,18 +5,24 @@ const cancelModal = document.getElementById('cancel-modal')!;
 const submitModal = document.getElementById('submit-modal')!;
 const contact = document.getElementById('contact')!;
 
-export const submitModalForm = (event: SubmitEvent) => {
+const nameInput = document.getElementById('name') as HTMLInputElement;
+const emailInput = document.getElementById('email') as HTMLInputElement;
+const messageInput = document.getElementById('message') as HTMLInputElement;
+
+export const submitModalForm = (event: any) => {
   event.preventDefault();
 
-  const nameInput = document.getElementById('name') as HTMLInputElement;
-  const emailInput = document.getElementById('email') as HTMLInputElement;
-  const messageInput = document.getElementById('message') as HTMLInputElement;
+  modal.style['visibility'] = 'hidden';
 
   postSubmitForm({
     name: nameInput.value,
     email: emailInput.value,
     message: messageInput.value,
   });
+
+  nameInput.value = '';
+  emailInput.value = '';
+  messageInput.value = '';
 };
 
 export const toggleModalVisibility = (event: MouseEvent) => {
@@ -31,9 +37,6 @@ export const toggleModalVisibility = (event: MouseEvent) => {
   }
 };
 
-modal.onsubmit = event => {
-  submitModalForm(event as SubmitEvent);
-  modal.style['visibility'] = 'hidden';
-};
+modal.onsubmit = submitModalForm as any;
 cancelModal.onclick = toggleModalVisibility;
 contact.onclick = toggleModalVisibility;
