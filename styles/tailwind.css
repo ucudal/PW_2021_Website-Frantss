@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: white;
+  background: #1d1160;
+  background-image: url('../assets/background.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.canvas {
+  background: #1d1160;
+  background: linear-gradient(
+    130deg,
+    #1d116044 0%,
+    #5c00a244 60%,
+    #662d9144 100%
+  );
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  @apply hover:fill-tertiary hover:text-secondary;
+}
+
+.nav-item {
+  @apply flex flex-row-reverse gap-2 justify-start;
+}
+
+.nav-item > p {
+  @apply opacity-0 transition-opacity duration-1000 ease-out;
+}
+
+.nav-item > a:hover + p {
+  @apply font-bold opacity-100;
+}
+
+.experience-item-container {
+  @apply p-8 m-16 mb-2 mt-2 w-2/3 flex items-center justify-center;
+  @apply border hover:border-secondary;
+  @apply hover:bg-secondary hover:bg-opacity-20 bg-opacity-40 bg-primary;
+
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+
+.experience-item-container > div {
+  @apply text-center;
+}
+
+.experience-item-container a {
+  text-decoration: underline;
+}
+
+.skill-item-container {
+  @apply text-tertiary text-center;
+  @apply flex flex-col justify-center;
+}
+
+.skill-item-container svg {
+  @apply text-tertiary;
+  @apply hover:fill-tertiary hover:text-secondary;
+}
+
+#modal {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#modal > form {
+  @apply border-tertiary border;
+  @apply bg-primary bg-opacity-100;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem;
+}
+
+#modal input,
+#modal textarea,
+#modal button {
+  @apply hover:bg-secondary hover:bg-opacity-20;
+  @apply border-tertiary border;
+  background: none;
+  padding: 0.5rem;
+}
+
+#modal button {
+  align-self: flex-end;
+}
+
+#modal > form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#modal > form > div:last-child {
+  flex-direction: row;
+  justify-content: space-around;
+}

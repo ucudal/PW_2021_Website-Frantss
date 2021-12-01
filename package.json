@@ -1,0 +1,34 @@
+{
+  "name": "web-portfolio-frantss",
+  "version": "1.0.0",
+  "description": "A web portfolio for Programación Web",
+  "repository": "https://Frantss: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@github.com/ucudal/PW_2021_Website-Frantss.git",
+  "license": "MIT",
+  "author": "Frantss <frantss11@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "minify": "yarn uglifyjs -c -m --source-map -o build/index.js",
+    "build:ts": "tsc",
+    "build:css": "yarn tailwind -i ./styles/tailwind.css -o styles/tailwind.output.css --jit",
+    "dev": "yarn concurrently \"yarn build:css -w\" \"yarn build:ts -w\" \"yarn browser-sync start -c browser-sync.config.js\""
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "concurrently": "^6.2.1",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.7",
+    "uglify-js": "^3.14.3"
+  },
+  "dependencies": {
+    "alpinejs": "^3.5.1",
+    "feather-icons": "^4.28.0"
+  }
+}
